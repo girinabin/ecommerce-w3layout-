@@ -1,4 +1,4 @@
-z{% extends  "src/base.html" %}
+{% extends  "src/base.html" %}
 {%load static%}
 
 {% block content %}
@@ -341,7 +341,7 @@ z{% extends  "src/base.html" %}
 										<del>${{nut.discount}}</del>
 									</div>
 									<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
-										<form action="/checkout/" method="POST">
+										<form action="{%url 'checkout'%}" method="post">
 											{% csrf_token %}
 											<fieldset>
 												<input type="hidden" name="cmd" value="_cart" />
